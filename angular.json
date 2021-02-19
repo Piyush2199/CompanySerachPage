@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CompanySearchPage"
+    }
+  },
+  "defaultProject": "CompanySearchPage",
+  "cli": {
+    "analytics": "e2dc21f4-b9d6-4965-b240-7a4c7786e4e8"
+  }
 }

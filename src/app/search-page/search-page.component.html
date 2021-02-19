@@ -1,0 +1,45 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    
+     <p>
+       <label for="csrNumber">CSR Number </label>
+       <input type="text" id="csrNumber" name="csrNumber" formControlName="csrNumber">
+     </p>
+    
+     <p>
+       <label for="companyName">Company Name </label>
+       <input type="text" id="companyName" name="companyName" formControlName="companyName">
+     </p>
+    
+     <p>
+       <label for="country">Country </label>
+       <select id="country" name="country"  formControlName="country">
+         <option [ngValue]="country" *ngFor="let country of countries">
+           {{country.name}}
+         </option>
+       </select>
+     </p>
+    
+     <p>
+        <label for="region">Region </label>
+        <select id="region" name="region"  formControlName="region">
+                <option *ngFor="let region of regions" [ngValue]="region">
+                        {{ region.name }}
+                      </option>
+        </select>
+     </p>
+     
+      <p>
+        <label for="poBox">PO Box </label>
+        <input type="text" id="poBox" name="poBox" formControlName="poBox">
+      </p>
+
+      <p>
+        <label for="town">Town </label>
+        <input type="text" id="town" name="town" formControlName="town">
+      </p>
+
+     <p>
+       <button type="submit">Submit</button>
+     </p>
+    
+   </form>
